@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+require 'searcher/binary_search'
+
+binary_search = Searcher::BinarySearch.new(STDOUT)
+array_size = ARGV[0].to_i
+
+array_of_ints = []
+array_size.times do
+  array_of_ints << (1 + rand(array_size))
+end
+
+binary_search.search((1 + rand(array_size)), array_of_ints.compact.sort.uniq)
