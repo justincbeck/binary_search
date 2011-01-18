@@ -1,0 +1,1 @@
+require 'searcher/binary_search'

@@ -1,0 +1,6 @@
+if [[ -d "$rvm_path/environments" && -s "$rvm_path/environments/ruby-1.9.2-p0@binary_search" ]] ; then
+  \. "$rvm_path/environments/ruby-1.9.2-p0@binary_search"
+else
+  rvm --create use  "ruby-1.9.2-p0@binary_search"
+fi
+
